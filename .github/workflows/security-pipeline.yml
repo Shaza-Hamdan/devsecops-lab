@@ -92,11 +92,11 @@ jobs:
 
        # Add MySQL database service
       services:
-          mysql:
+        mysql:
             image: mysql:8.0
             env:
-              MYSQL_ROOT_PASSWORD: root
-              MYSQL_DATABASE: mydb
+              MYSQL_ROOT_PASSWORD: sqlShaza_94
+              MYSQL_DATABASE: GitFile
             ports:
               - 3306:3306
             options: >-
