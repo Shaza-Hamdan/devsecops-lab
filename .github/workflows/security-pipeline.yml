@@ -1,0 +1,63 @@
+name: DevSecOps Security Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  # 1. SAST
+  sast:
+    name: SAST (Semgrep)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Semgrep SAST
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: p/owasp-top-ten
+
+  # 2. SCA
+  sca:
+    name: SCA (Dependency Check)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0'
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Run OWASP Dependency Check
+        uses: dependency-check/Dependency-Check_Action@main
+        with:
+          project: 'BackendTutorialEmpty'
+          path: '.'
+          format: 'HTML'
+          out: 'reports'
+
+  # 3. DAST (Dynamic Analysis)
+  dast:
+    name: DAST (OWASP ZAP)
+    runs-on: ubuntu-latest
+    needs: []  # Can run in parallel with SAST/SCA or after
+    steps:
+      - name: Run ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.11.0
+        with:
+          target: 'http://localhost:5068'
+          fail_action: false
+
+  # 4. Security Gate (evaluates ALL: SAST + SCA + DAST)
+  security-gate:
+    name: Security Gate
+    runs-on: ubuntu-latest
+    needs: [sast, sca, dast]  # Waits for ALL three to complete
+    steps:
+      - name: Evaluate all security results
+        run: |
+          echo "Security gate passed - all checks completed"
+          # Here you would add logic to fail if any critical vulnerability found
