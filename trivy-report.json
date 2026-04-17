@@ -1,0 +1,931 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.69.3"
+  },
+  "ReportID": "019d7abc-593c-7a34-9377-a0d2e6d0be39",
+  "CreatedAt": "2026-04-11T04:10:57.212672084Z",
+  "ArtifactID": "sha256:cadc6b4bdf3041a2f304e0e1755d7a02c7090f1fa4bb9903ded035e9e061a5f7",
+  "ArtifactName": "/project",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://github.com/Shaza-Hamdan/Collaborative-Document-Editing-System.git",
+    "Branch": "main",
+    "Commit": "c395f887f17b367c7cb75eff3d10667373585e10",
+    "CommitMsg": "uploading project1",
+    "Author": "Shaza Hamdan \u003cshaza.hamdan@gmail.com\u003e",
+    "Committer": "Shaza Hamdan \u003cshaza.hamdan@gmail.com\u003e"
+  },
+  "Results": [
+    {
+      "Target": "bin/Debug/net9.0/Tutorial.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "ID": "Tutorial/1.0.0",
+          "Name": "Tutorial",
+          "Identifier": {
+            "PURL": "pkg:nuget/Tutorial@1.0.0",
+            "UID": "71b9328bdc925428"
+          },
+          "Version": "1.0.0",
+          "Relationship": "root",
+          "DependsOn": [
+            "Microsoft.EntityFrameworkCore.Relational/9.0.0",
+            "Pomelo.EntityFrameworkCore.MySql/9.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.0",
+            "Microsoft.AspNetCore.OpenApi/8.0.2",
+            "Microsoft.EntityFrameworkCore.Design/9.0.0",
+            "System.IdentityModel.Tokens.Jwt/8.15.0",
+            "BouncyCastle.Cryptography/2.4.0",
+            "LibGit2Sharp/0.31.0",
+            "Microsoft.EntityFrameworkCore/9.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1138,
+              "EndLine": 1142
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "BouncyCastle.Cryptography/2.4.0",
+          "Name": "BouncyCastle.Cryptography",
+          "Identifier": {
+            "PURL": "pkg:nuget/BouncyCastle.Cryptography@2.4.0",
+            "UID": "8f86f9fa96268059"
+          },
+          "Version": "2.4.0",
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 1143,
+              "EndLine": 1149
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "LibGit2Sharp/0.31.0",
+          "Name": "LibGit2Sharp",
+          "Identifier": {
+            "PURL": "pkg:nuget/LibGit2Sharp@0.31.0",
+            "UID": "8d334cb3e1f6bba6"
+          },
+          "Version": "0.31.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "LibGit2Sharp.NativeBinaries/2.0.323"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1157,
+              "EndLine": 1163
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.0",
+          "Name": "Microsoft.AspNetCore.Authentication.JwtBearer",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.Authentication.JwtBearer@9.0.0",
+            "UID": "dd7219d81fa38961"
+          },
+          "Version": "9.0.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.0.1"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1192,
+              "EndLine": 1198
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.AspNetCore.OpenApi/8.0.2",
+          "Name": "Microsoft.AspNetCore.OpenApi",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.OpenApi@8.0.2",
+            "UID": "de02772adb03df"
+          },
+          "Version": "8.0.2",
+          "Relationship": "direct",
+          "DependsOn": [
+            "Microsoft.OpenApi/1.6.14"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1283,
+              "EndLine": 1289
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.EntityFrameworkCore/9.0.0",
+          "Name": "Microsoft.EntityFrameworkCore",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.EntityFrameworkCore@9.0.0",
+            "UID": "6122c8956f72c74d"
+          },
+          "Version": "9.0.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "Microsoft.EntityFrameworkCore.Abstractions/9.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1430,
+              "EndLine": 1436
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.EntityFrameworkCore.Design/9.0.0",
+          "Name": "Microsoft.EntityFrameworkCore.Design",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.EntityFrameworkCore.Design@9.0.0",
+            "UID": "102522091676647c"
+          },
+          "Version": "9.0.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "Humanizer.Core/2.14.1",
+            "Microsoft.Build.Locator/1.7.8",
+            "Microsoft.CodeAnalysis.CSharp/4.8.0",
+            "Microsoft.CodeAnalysis.Workspaces.MSBuild/4.8.0",
+            "Microsoft.EntityFrameworkCore.Relational/9.0.0",
+            "Microsoft.Extensions.DependencyModel/9.0.0",
+            "Mono.TextTemplating/3.0.0",
+            "Microsoft.CodeAnalysis.CSharp.Workspaces/4.8.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1451,
+              "EndLine": 1457
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.EntityFrameworkCore.Relational/9.0.0",
+          "Name": "Microsoft.EntityFrameworkCore.Relational",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.EntityFrameworkCore.Relational@9.0.0",
+            "UID": "5a914c8bc8a8ccf7"
+          },
+          "Version": "9.0.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "Microsoft.EntityFrameworkCore/9.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1458,
+              "EndLine": 1464
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Pomelo.EntityFrameworkCore.MySql/9.0.0",
+          "Name": "Pomelo.EntityFrameworkCore.MySql",
+          "Identifier": {
+            "PURL": "pkg:nuget/Pomelo.EntityFrameworkCore.MySql@9.0.0",
+            "UID": "7153ffd59b804ec0"
+          },
+          "Version": "9.0.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "MySqlConnector/2.4.0",
+            "Microsoft.EntityFrameworkCore.Relational/9.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1745,
+              "EndLine": 1751
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "System.IdentityModel.Tokens.Jwt/8.15.0",
+          "Name": "System.IdentityModel.Tokens.Jwt",
+          "Identifier": {
+            "PURL": "pkg:nuget/System.IdentityModel.Tokens.Jwt@8.15.0",
+            "UID": "b802523eda2b9404"
+          },
+          "Version": "8.15.0",
+          "Relationship": "direct",
+          "DependsOn": [
+            "Microsoft.IdentityModel.JsonWebTokens/8.15.0",
+            "Microsoft.IdentityModel.Tokens/8.15.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1850,
+              "EndLine": 1856
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Humanizer.Core/2.14.1",
+          "Name": "Humanizer.Core",
+          "Identifier": {
+            "PURL": "pkg:nuget/Humanizer.Core@2.14.1",
+            "UID": "ce8ceb90b825f68d"
+          },
+          "Version": "2.14.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1150,
+              "EndLine": 1156
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "LibGit2Sharp.NativeBinaries/2.0.323",
+          "Name": "LibGit2Sharp.NativeBinaries",
+          "Identifier": {
+            "PURL": "pkg:nuget/LibGit2Sharp.NativeBinaries@2.0.323",
+            "UID": "be4228bebdd00024"
+          },
+          "Version": "2.0.323",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1164,
+              "EndLine": 1170
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.AspNetCore.Server.Kestrel.Https/2.2.0",
+          "Name": "Microsoft.AspNetCore.Server.Kestrel.Https",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.Server.Kestrel.Https@2.2.0",
+            "UID": "b13c0a30fa4d1e44"
+          },
+          "Version": "2.2.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1332,
+              "EndLine": 1338
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.2.0",
+          "Name": "Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions@2.2.0",
+            "UID": "16ca5c580a703b9d"
+          },
+          "Version": "2.2.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1339,
+              "EndLine": 1345
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.Bcl.AsyncInterfaces/7.0.0",
+          "Name": "Microsoft.Bcl.AsyncInterfaces",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.Bcl.AsyncInterfaces@7.0.0",
+            "UID": "36fd2e9b5353d9c6"
+          },
+          "Version": "7.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1360,
+              "EndLine": 1366
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.Build.Locator/1.7.8",
+          "Name": "Microsoft.Build.Locator",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.Build.Locator@1.7.8",
+            "UID": "7848d64904bb42cf"
+          },
+          "Version": "1.7.8",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1374,
+              "EndLine": 1380
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.CodeAnalysis.CSharp/4.8.0",
+          "Name": "Microsoft.CodeAnalysis.CSharp",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.CodeAnalysis.CSharp@4.8.0",
+            "UID": "8e35ba2dc8149c6a"
+          },
+          "Version": "4.8.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Microsoft.CodeAnalysis.Common/4.8.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1395,
+              "EndLine": 1401
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.CodeAnalysis.CSharp.Workspaces/4.8.0",
+          "Name": "Microsoft.CodeAnalysis.CSharp.Workspaces",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.CodeAnalysis.CSharp.Workspaces@4.8.0",
+            "UID": "a9dd1ce0391bfcb2"
+          },
+          "Version": "4.8.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Humanizer.Core/2.14.1",
+            "Microsoft.CodeAnalysis.CSharp/4.8.0",
+            "Microsoft.CodeAnalysis.Common/4.8.0",
+            "Microsoft.CodeAnalysis.Workspaces.Common/4.8.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1402,
+              "EndLine": 1408
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.CodeAnalysis.Common/4.8.0",
+          "Name": "Microsoft.CodeAnalysis.Common",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.CodeAnalysis.Common@4.8.0",
+            "UID": "e0b778fe652c1f8e"
+          },
+          "Version": "4.8.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1388,
+              "EndLine": 1394
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.CodeAnalysis.Workspaces.Common/4.8.0",
+          "Name": "Microsoft.CodeAnalysis.Workspaces.Common",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.CodeAnalysis.Workspaces.Common@4.8.0",
+            "UID": "20880d8913d51f6c"
+          },
+          "Version": "4.8.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Humanizer.Core/2.14.1",
+            "Microsoft.Bcl.AsyncInterfaces/7.0.0",
+            "Microsoft.CodeAnalysis.Common/4.8.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1416,
+              "EndLine": 1422
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.CodeAnalysis.Workspaces.MSBuild/4.8.0",
+          "Name": "Microsoft.CodeAnalysis.Workspaces.MSBuild",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.CodeAnalysis.Workspaces.MSBuild@4.8.0",
+            "UID": "53eb35652aea9c35"
+          },
+          "Version": "4.8.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Microsoft.CodeAnalysis.Common/4.8.0",
+            "Microsoft.CodeAnalysis.Workspaces.Common/4.8.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1423,
+              "EndLine": 1429
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.EntityFrameworkCore.Abstractions/9.0.0",
+          "Name": "Microsoft.EntityFrameworkCore.Abstractions",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.EntityFrameworkCore.Abstractions@9.0.0",
+            "UID": "c397b9f6846b41b0"
+          },
+          "Version": "9.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1437,
+              "EndLine": 1443
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.Extensions.DependencyModel/9.0.0",
+          "Name": "Microsoft.Extensions.DependencyModel",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.Extensions.DependencyModel@9.0.0",
+            "UID": "9c0a7242e15a3296"
+          },
+          "Version": "9.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1556,
+              "EndLine": 1562
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Abstractions/8.15.0",
+          "Name": "Microsoft.IdentityModel.Abstractions",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Abstractions@8.15.0",
+            "UID": "fa4716e4bc103ff"
+          },
+          "Version": "8.15.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1661,
+              "EndLine": 1667
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.IdentityModel.JsonWebTokens/8.15.0",
+          "Name": "Microsoft.IdentityModel.JsonWebTokens",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.JsonWebTokens@8.15.0",
+            "UID": "6527ce0716488b26"
+          },
+          "Version": "8.15.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Microsoft.IdentityModel.Tokens/8.15.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1668,
+              "EndLine": 1674
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Logging/8.15.0",
+          "Name": "Microsoft.IdentityModel.Logging",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Logging@8.15.0",
+            "UID": "c44763247605ebfb"
+          },
+          "Version": "8.15.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Microsoft.IdentityModel.Abstractions/8.15.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1675,
+              "EndLine": 1681
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Protocols/8.0.1",
+          "Name": "Microsoft.IdentityModel.Protocols",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Protocols@8.0.1",
+            "UID": "cddcc13b94ba40cf"
+          },
+          "Version": "8.0.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Microsoft.IdentityModel.Tokens/8.15.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1682,
+              "EndLine": 1688
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.0.1",
+          "Name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Protocols.OpenIdConnect@8.0.1",
+            "UID": "69b97a021866c5bc"
+          },
+          "Version": "8.0.1",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Microsoft.IdentityModel.Protocols/8.0.1",
+            "System.IdentityModel.Tokens.Jwt/8.15.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1689,
+              "EndLine": 1695
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Tokens/8.15.0",
+          "Name": "Microsoft.IdentityModel.Tokens",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Tokens@8.15.0",
+            "UID": "e2736e6c5300592f"
+          },
+          "Version": "8.15.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Microsoft.IdentityModel.Logging/8.15.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1696,
+              "EndLine": 1702
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Microsoft.OpenApi/1.6.14",
+          "Name": "Microsoft.OpenApi",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.OpenApi@1.6.14",
+            "UID": "e6c5e6739d93a016"
+          },
+          "Version": "1.6.14",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1717,
+              "EndLine": 1723
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Mono.TextTemplating/3.0.0",
+          "Name": "Mono.TextTemplating",
+          "Identifier": {
+            "PURL": "pkg:nuget/Mono.TextTemplating@3.0.0",
+            "UID": "6917cecbfed0097f"
+          },
+          "Version": "3.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "System.CodeDom/6.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1724,
+              "EndLine": 1730
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "MySqlConnector/2.4.0",
+          "Name": "MySqlConnector",
+          "Identifier": {
+            "PURL": "pkg:nuget/MySqlConnector@2.4.0",
+            "UID": "b476ba8a66fa31c9"
+          },
+          "Version": "2.4.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1731,
+              "EndLine": 1737
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Newtonsoft.Json/11.0.2",
+          "Name": "Newtonsoft.Json",
+          "Identifier": {
+            "PURL": "pkg:nuget/Newtonsoft.Json@11.0.2",
+            "UID": "4aafb3b895781074"
+          },
+          "Version": "11.0.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1738,
+              "EndLine": 1744
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Swashbuckle.AspNetCore.Swagger/6.6.2",
+          "Name": "Swashbuckle.AspNetCore.Swagger",
+          "Identifier": {
+            "PURL": "pkg:nuget/Swashbuckle.AspNetCore.Swagger@6.6.2",
+            "UID": "54596d72284e77af"
+          },
+          "Version": "6.6.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Microsoft.OpenApi/1.6.14"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1759,
+              "EndLine": 1765
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Swashbuckle.AspNetCore.SwaggerGen/6.6.2",
+          "Name": "Swashbuckle.AspNetCore.SwaggerGen",
+          "Identifier": {
+            "PURL": "pkg:nuget/Swashbuckle.AspNetCore.SwaggerGen@6.6.2",
+            "UID": "f53fa47832eb0547"
+          },
+          "Version": "6.6.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "Swashbuckle.AspNetCore.Swagger/6.6.2"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1766,
+              "EndLine": 1772
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "Swashbuckle.AspNetCore.SwaggerUI/6.6.2",
+          "Name": "Swashbuckle.AspNetCore.SwaggerUI",
+          "Identifier": {
+            "PURL": "pkg:nuget/Swashbuckle.AspNetCore.SwaggerUI@6.6.2",
+            "UID": "576003e740eaa5e2"
+          },
+          "Version": "6.6.2",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1773,
+              "EndLine": 1779
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "System.CodeDom/6.0.0",
+          "Name": "System.CodeDom",
+          "Identifier": {
+            "PURL": "pkg:nuget/System.CodeDom@6.0.0",
+            "UID": "7f6c4ec31bf93bc"
+          },
+          "Version": "6.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1787,
+              "EndLine": 1793
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "System.Composition.AttributedModel/7.0.0",
+          "Name": "System.Composition.AttributedModel",
+          "Identifier": {
+            "PURL": "pkg:nuget/System.Composition.AttributedModel@7.0.0",
+            "UID": "8883e9200c25513d"
+          },
+          "Version": "7.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1808,
+              "EndLine": 1814
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "System.Composition.Convention/7.0.0",
+          "Name": "System.Composition.Convention",
+          "Identifier": {
+            "PURL": "pkg:nuget/System.Composition.Convention@7.0.0",
+            "UID": "9ed7dde9a3b9030f"
+          },
+          "Version": "7.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "System.Composition.AttributedModel/7.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1815,
+              "EndLine": 1821
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "System.Composition.Hosting/7.0.0",
+          "Name": "System.Composition.Hosting",
+          "Identifier": {
+            "PURL": "pkg:nuget/System.Composition.Hosting@7.0.0",
+            "UID": "24e3f16c1e492dc6"
+          },
+          "Version": "7.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "System.Composition.Runtime/7.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1822,
+              "EndLine": 1828
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "System.Composition.Runtime/7.0.0",
+          "Name": "System.Composition.Runtime",
+          "Identifier": {
+            "PURL": "pkg:nuget/System.Composition.Runtime@7.0.0",
+            "UID": "30604713e65a4767"
+          },
+          "Version": "7.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1829,
+              "EndLine": 1835
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        },
+        {
+          "ID": "System.Composition.TypedParts/7.0.0",
+          "Name": "System.Composition.TypedParts",
+          "Identifier": {
+            "PURL": "pkg:nuget/System.Composition.TypedParts@7.0.0",
+            "UID": "2cc321cd0473f95"
+          },
+          "Version": "7.0.0",
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "System.Composition.AttributedModel/7.0.0",
+            "System.Composition.Hosting/7.0.0",
+            "System.Composition.Runtime/7.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1836,
+              "EndLine": 1842
+            }
+          ],
+          "AnalyzedBy": "dotnet-core"
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2024-21907",
+          "VendorIDs": [
+            "GHSA-5crp-9r3c-p9vr"
+          ],
+          "PkgID": "Newtonsoft.Json/11.0.2",
+          "PkgName": "Newtonsoft.Json",
+          "PkgIdentifier": {
+            "PURL": "pkg:nuget/Newtonsoft.Json@11.0.2",
+            "UID": "4aafb3b895781074"
+          },
+          "InstalledVersion": "11.0.2",
+          "FixedVersion": "13.0.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-21907",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory NuGet",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anuget"
+          },
+          "Fingerprint": "sha256:b5a8b8d3e52228e5ab86127cc5fffa14fea118585dd045e11dade423d8ecbaff",
+          "Title": "Improper Handling of Exceptional Conditions in Newtonsoft.Json",
+          "Description": "Newtonsoft.Json before version 13.0.1 is affected by a mishandling of exceptional conditions vulnerability. Crafted data that is passed to the JsonConvert.DeserializeObject method may trigger a StackOverflow exception resulting in denial of service. Depending on the usage of the library, an unauthenticated and remote attacker may be able to cause the denial of service condition.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-755"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://alephsecurity.com/2018/10/22/StackOverflowException",
+            "https://alephsecurity.com/2018/10/22/StackOverflowException/",
+            "https://alephsecurity.com/vulns/aleph-2018004",
+            "https://github.com/JamesNK/Newtonsoft.Json",
+            "https://github.com/JamesNK/Newtonsoft.Json/commit/7e77bbe1beccceac4fc7b174b53abfefac278b66",
+            "https://github.com/JamesNK/Newtonsoft.Json/issues/2457",
+            "https://github.com/JamesNK/Newtonsoft.Json/pull/2462",
+            "https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+            "https://security.snyk.io/vuln/SNYK-DOTNET-NEWTONSOFTJSON-2774678",
+            "https://vulncheck.com/advisories/vc-advisory-GHSA-5crp-9r3c-p9vr"
+          ],
+          "PublishedDate": "2024-01-03T16:15:08.793Z",
+          "LastModifiedDate": "2025-11-28T23:15:47.937Z"
+        }
+      ]
+    }
+  ]
+}

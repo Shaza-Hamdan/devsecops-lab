@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collaborative Document System – Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button {
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .result {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Demo: User Authentication</h1>
+
+<!-- Registration -->
+<div class="box">
+    <h2>Registration</h2>
+    <input id="regUsername" placeholder="Username">
+    <input id="regEmail" placeholder="Email">
+    <input id="regPassword" type="password" placeholder="Password">
+    <input id="regPhone" placeholder="Phone number">
+    <button onclick="register()">Register</button>
+    <div class="result" id="regResult"></div>
+</div>
+
+<!-- Login -->
+<div class="box">
+    <h2>Login</h2>
+    <input id="loginEmail" placeholder="Email">
+    <input id="loginPassword" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div class="result" id="loginResult"></div>
+</div>
+
+<script>
+
+    const API_URL = "http://localhost:5068/api/Registration";
+    
+    async function register() {
+     
+        const data = {
+            UserName: document.getElementById("regUsername").value,
+            Email: document.getElementById("regEmail").value,
+            Password: document.getElementById("regPassword").value,
+            PhoneNumber: document.getElementById("regPhone").value
+        };
+
+        const response = await fetch(`${API_URL}/register`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        document.getElementById("regResult").innerText =
+            response.ok ? "Registration successful (role: Guest)" : "Registration failed";
+    }
+
+    async function login() {
+        const data = {
+            email: document.getElementById("loginEmail").value,
+            password: document.getElementById("loginPassword").value
+        };
+
+        const response = await fetch(`${API_URL}/login`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.text();
+
+        if (response.ok) {
+            localStorage.setItem("token", result);
+            document.getElementById("loginResult").innerText = "Login successful. Token saved.";
+        } else {
+            document.getElementById("loginResult").innerText = "Login failed.";
+        }
+    }
+</script>
+
+</body>
+</html>
