@@ -110,8 +110,8 @@ jobs:
           
       - name: Debug - check if app is running
         run: |
-        echo "Testing application endpoint..."
-        curl -v http://localhost:5068/swagger/index.html || true
+            echo "Testing application endpoint..."
+            curl -v http://localhost:5068/swagger/index.html || true
 
       - name: Run OWASP ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.11.0
