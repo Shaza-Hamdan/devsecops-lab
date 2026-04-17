@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
+
   # ======================
   # 1. BUILD
   # ======================
@@ -110,6 +111,12 @@ jobs:
           target: 'http://localhost:5068'
           fail_action: false
 
+      - name: Upload DAST report
+        uses: actions/upload-artifact@v4
+        with:
+          name: dast-report
+          path: report.html
+
   # ======================
   # 5. SECURITY GATE
   # ======================
@@ -129,9 +136,8 @@ jobs:
         run: |
           echo "Checking security reports..."
 
-          # Fail pipeline if HIGH or CRITICAL vulnerabilities exist
           if grep -R "HIGH" reports || grep -R "CRITICAL" reports; then
-            echo "❌ Security Gate FAILED: High/Critical vulnerabilities found"
+            echo "❌ Security Gate FAILED"
             exit 1
           fi
 
